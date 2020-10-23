@@ -1,0 +1,30 @@
+<!-- // 10. 获取当前时间，判断今年是否为闰年。两种方法判断
+//     1)判断今年是否为闰年；  能被400整除 或 被4整除但不能被100整除
+//     2)判断本年2月是否为28天。闰年：2月有29天  平年：2月有28天
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var date = new Date();
+        var y = date.getFullYear();
+        console.log(typeof y);
+        console.log(date, y);
+        if ((y % 4 == 0 && y % 100 !== 0) || y % 400 == 0) {
+            alert(`${y}是润年`);
+        } else {
+            alert(`${y}}是平年`);
+        }
+
+    </script>
+</body>
+
+</html>

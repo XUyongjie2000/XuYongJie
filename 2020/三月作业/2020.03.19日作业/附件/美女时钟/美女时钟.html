@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>title</title>
+
+</head>
+
+<body>
+  <img src="" alt="" id="im" />
+  <script>
+    //     1. 实现美女时钟效果(附件)：
+    // - 页面和功能都需要自己完成
+    // - 页面中会不断变换美女，并且美女手里拿的日历的小时和秒是和系统当前的时间是一样的
+
+    // 获取元素
+    let img = document.querySelector('#im')
+    
+    // 目的解决页面一上来加载空白的问题
+    fn()
+
+    setInterval(fn, 1000)
+    // 创建函数
+    function fn() {
+      // 获取时间
+      let date = new Date();
+      // 获取小时
+      let hours = date.getHours();
+      // 获取秒
+      let mins = date.getSeconds();
+      // 如果数字小于10  就在前面加个0
+      hours = hours > 9 ? hours : '0' + hours
+      mins = mins > 9 ? mins : '0' + mins
+      // 给图片添加路径
+      img.src = `./meimei/${hours}_${mins}.jpg`;
+
+    }
+  </script>
+
+</body>
+
+</html>

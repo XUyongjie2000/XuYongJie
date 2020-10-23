@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Father(name, age) {
+            this.name = name
+            this.age = age
+        }
+
+        Father.prototype.face = function () {
+            console.log("您面相五官端正，非池中之物");
+        }
+
+        function Son(name, age, score = 5) {
+            Father.call(this, name, age)
+            this.score = score
+        }
+
+        Son.prototype = new Father()
+        Son.prototype.study = function () {
+            console.log("我爱学茅山道术");
+        }
+
+        let zs = new Son("张三", 18)
+        console.log(zs);
+        zs.face()
+        console.log(Father.prototype);
+    </script>
+</body>
+
+</html>

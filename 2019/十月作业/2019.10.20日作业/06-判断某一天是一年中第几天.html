@@ -1,0 +1,121 @@
+<!-- // 6. 写一个函数，输入某年某月某日，判断这一天是一年中的第几天   1998  3   1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 获取年
+
+    var year = +prompt("请输入今年的年号");
+
+    // 获取月
+
+    var month = +prompt("请输入这个月是第几个月");
+
+    // 获取天
+
+    var day = +prompt("请输入今天是几号");
+
+    // 判定当年是否是闰年 因为它决定了2月到底有多少天
+
+    // var isRun = year % 4 === 0 && year % 100 != 0 || year % 400 === 0 ? true : false;
+
+    // if的等价上面代码
+
+    var isRun;
+
+    if (year % 4 === 0 && year % 100 != 0 || year % 400 === 0) {
+
+        isRun = true;
+
+    } else {
+
+        isRun = false;
+
+    }
+
+
+
+
+    // alert(year + "年" + month + "月" + day + "号");
+
+    // 目的： 计算今天 是今年的第几天
+
+    // 1 将之前的月的每一天都累加 再加上这个月已经过了的天数
+
+    // 因为月是几月无法确定 所以想要一条一条写代码的同学是无法完成的
+
+    // 我们可以利用循环 累加之前的每一个月的天数
+
+    // 定义一个变量 用来累加每一个月的天数
+
+    var count = 0;
+
+    for (var i = 0; i < month; i++) {
+
+        // 循环的过程就是累加之前每一个月的总天数的过程
+
+        switch (i) {
+
+            case 1:
+
+            case 3:
+
+            case 5:
+
+            case 7:
+
+            case 8:
+
+            case 10:
+
+            case 12:
+
+                count += 31;
+
+            break;
+
+            case 4:
+
+            case 6:
+
+            case 9:
+
+            case 11:
+
+                count += 30;
+
+            break;
+
+            case 2:
+
+                if (isRun) {
+
+                    // 说明是闰年
+
+                    count += 29;
+
+                } else {
+
+                    // 说明是平年
+
+                    count += 28;
+
+                }
+
+        }
+
+    }
+
+    count += day;
+
+    alert("今天是今年的第" + count + "天")
+
+    </script>
+</body>
+</html>

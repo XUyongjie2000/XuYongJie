@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .track {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            border: 1px solid red;
+        }
+
+        .ball {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: -8px;
+            left: -8px;
+            background-color: cadetblue;
+            border-radius: 50%;
+            animation: move 4s linear;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(500px, 0);
+            }
+
+            50% {
+                transform: translate(500px, 500px);
+            }
+
+            75% {
+                transform: translate(0, 500px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="track">
+        <div class="ball">
+
+        </div>
+    </div>
+</body>
+
+</html>

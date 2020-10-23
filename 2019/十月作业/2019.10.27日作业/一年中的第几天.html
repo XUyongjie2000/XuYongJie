@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 初始化信息
+        var stuInfo = [
+            {
+                name: "拉拉",
+                age: 20,
+                score: 89
+            },
+            {
+                name: "丽丽",
+                age: 18,
+                score: 90
+            },
+            {
+                name: "明明",
+                age: 21,
+                score: 95
+            },
+            {
+                name: "瑶瑶",
+                age: 23,
+                score: 96
+            },
+            {
+                name: "小小",
+                age: 24,
+                score: 92
+            },
+            {
+                name: "菲菲",
+                age: 25,
+                score: 76
+            }
+        ];
+        // 步骤:
+        // 1.弹出一句话 "欢迎进入学生管理系统"
+        alert("欢迎进入学生管理系统");
+        // 2.while死循环
+        while (true) {
+            // 2.1 弹出 操作菜单  "请输入操作项的序号:  1.添加学生信息 2.查找学生信息 3.修改学生信息 4.删除学生信息 5.退出管理系统"
+            let menuNum = prompt(`
+                    请输入操作项的序号:
+                    1.添加学生信息 
+                    2.修改学生信息 
+                    3.查找学生信息 
+                    4.删除学生信息 
+                    5.退出管理系统
+            `)
+
+            // 2.2 判断用户选择的序号是不是5
+            if (menuNum == 5) {
+                // 2.2.1 如果是5 弹出一句话 您真的要退出系统吗？
+                let escChoose = confirm("您真的要退出系统吗？");
+                // 2.2.2 判断如果用户选择的是 确定 那么退出 
+                if (escChoose) {
+                    break;
+                }
+            }
+
+            // 2.3 判断用户选择的是不是4 如果是4
+            if (menuNum == 4) {
+                // 2.3.1 循环遍历stuInfo这个数组把数组中的每个姓名拿出来
+                let delStr = "";
+                for (let i = 0; i < stuInfo.length; i++) {
+                    delStr += `${i}.${stuInfo[i].name} \n`
+                }
+                // 2.3.2(提示框)弹出一个菜单 "请您选择要删除的学生信息序号 0.拉拉 1.丽丽 2.明明 3.瑶瑶 4.小小"
+                let delNum = prompt("请您选择要删除的学生信息序号: \n" + delStr) - 0;
+                // 2.3.3 接收用户选择的序号 Number(delNum)
+                // alert(typeof delNum);
+                // 2.3.4 使用stuInfo.splice(用户选择的序号,1)
+                stuInfo.splice(delNum, 1);
+                // 2.3.5 弹出: 学生信息删除成功
+                alert("学生信息删除成功");
+            }
+
+            // 2.4  判断用户选择的序号是不是 3
+            if (menuNum == 3) {
+                // 2.4.1 遍历stuInfo 拼接字符串 
+                let showStr = "";
+                for (let i = 0; i < stuInfo.length; i++) {
+                    showStr += `${i}.${stuInfo[i].name} \n`
+                }
+                // 2.4.2 提示用户"请选择您要查找的学生信息编号..."
+                let showNum = +prompt("请您选择要查询的学生信息序号: \n" + showStr);
+                // 2.4.3 接收用户输入的编号
+
+                // 2.4.4 根据用户编号 找到用户的信息 然后遍历该用户信息对象
+                let showInfo = "";
+                for (var key in stuInfo[showNum]) {
+                    // 在这里可以添加一个switch 把对象中的键改成中文
+                    // name: 张三
+                    showInfo += `${key}:${stuInfo[showNum][key]} \n`
+                }
+                // 2.4.5 通过拼接字符串 打印学生信息
+                alert("学生信息如下: \n" + showInfo);
+            }
+
+            // 2.5  判断用户选择的序号是不是2
+            if (menuNum == 2) {
+                // 2.5.1  循环遍历stuInfo那个数组 把数组中的所有人的名字列出来 让用户选择
+                let updateStr = "";
+                for (let i = 0; i < stuInfo.length; i++) {
+                    updateStr += `${i}.${stuInfo[i].name} \n`
+                }
+                let updateNum = +prompt("请您选择要修改的学生信息序号: \n" + updateStr);
+                // 2.5.2 获取用户输入的序号
+
+                // 2.5.3 提示"请您修改姓名数据" 根据用户输入的序号获取的那个对象所对应的名字
+                let updateName = prompt("请您重新输入姓名", stuInfo[updateNum].name);
+                // 2.5.4  把用户重新输入的名字设置给 之前用户输入的序号所对应的那个对象的name属性
+                stuInfo[updateNum].name = updateName;
+                // 2.5.5 提示修改数据成功
+                alert("数据修改成功");
+            }
+
+            // 2.6 判断用户选择的序号是不是1
+            if (menuNum == 1) {
+                // 2.6.1 提示用户输入姓名
+                // flag 一般存的都是 状态(true false)
+                let flag = false; // 假设名字不重复
+                // 2.6.2 循环遍历stuInfo
+                while (true) {
+                    // 接收用户输入学生姓名
+                    let name = prompt("请输入学生姓名");
+                    // 只有一个功能: 判断用户输入的名字是不是重复
+                    // 如果重复就是true 如果不重复就是false
+                    for (let i = 0; i < stuInfo.length; i++) {
+                        if (stuInfo[i].name == name) {
+                            flag = true;
+                            alert("用户已经存在,请重新输入");
+                            break;
+                        } else {
+                            flag = false;
+                        }
+                    }
+                    // 如果确实不重复  false
+                    if (flag == false) {
+                        // 2.6.2.1.2 如果不在 继续输入 年龄 和成绩
+                        let age = prompt("请输入学生年龄");
+                        let score = prompt("请输入学生成绩");
+                        // 2.6.2.1.2.1 把用户输入的姓名 年龄 成绩添加到数组中
+                        stuInfo.push({
+                            name: name,
+                            age: Number(age),
+                            score: Number(score)
+                        });
+                        alert("学生信息添加成功");
+                        break;
+                    }
+                }
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

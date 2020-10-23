@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-autofocus>
+  </div>
+
+  <script src="./lib/vue-3.0.js"></script>
+  <script>
+    let vm = Vue.createApp({});
+
+    vm.directive("autofocus", {
+      mounted(el) {
+        console.log(el)
+        el.focus();
+        el.value = '哈哈哈哈哈哈';
+        el.style.backgroundColor = "yellow"
+      }
+    })
+    vm.mount('#app')
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+/*页面头部*/
+    .tong {
+        height: 30px;
+        line-height: 30px;
+        background-color: #fff;
+    }
+    .tong a {
+        font-size: 14px;
+        color: #aaaaaa;
+    }
+/*头部*/
+    .tou {
+        height: 60px;
+        padding: 10px 0;
+        background-color: #2e3340;
+    }
+    .tou img {
+        margin-right: 60px;
+    }
+    .tou li {
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        margin-right: 20px;
+        font-size: 18px;
+    }
+    .tou li a {
+         color: #cca481;
+    }
+    .tou .a1 a {
+        color: #fff;
+    }
+/*banner部分*/
+    .ban li {
+        float: left;
+        height: 56px;
+        line-height: 56px;
+    }
+    .ban a {
+        font-size: 14px;
+        color: #000;
+    }
+    .ban span {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+    .sha {
+        background-color: #fff;
+        margin-top: 20px;
+        padding-top: 87px;
+        padding-left: 44px;
+        margin-bottom: 53px; 
+    }
+    .sha .chu {
+        height: 376px;
+        border-left: 1px solid #5b606b;
+        padding-left: 20px;
+    }
+    .chu h2 {
+        height: 68px;
+        line-height: 1.5;
+        font-size: 24px;
+        color: #000;
+    }
+    .chu li {
+        float: left;
+        margin-right: 10px;
+        width: 265px;
+        height: 268px;
+        background-color: #777777;
+    }
+    .chu li h4 {
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+    }
+    .chu li p {
+        height: 30px;
+        color: #99a9a9;
+    }
+    .chu li p span {
+        margin-left: 87px;
+    }
+    .ban .xia {
+        margin-top: 34px;
+        margin: 0 auto;
+        width: 206px;
+        height: 68px;
+        font-size: 16px;
+    }
+    .ban .xia a:nth-child(1) {
+        color: #999;
+        margin-right: 5px;
+    }
+/*页面底部*/
+    .di {
+        padding-top: 35px;
+        background-color: #2e3340;
+        color: #fff;
+    }
+    .di .shang .left dl {
+        float: left;
+        width: 148px;
+    }
+    .di .shang .left dt {
+        height: 48px;
+        font-size: 18px;
+    }
+    .di .shang .left dd {
+        height: 25px;
+        font-size: 14px;
+        color: #b0bcd0;
+    }
+    .di .shang .cen h5 {
+        height: 44px;
+        font-size: 18px;
+        width: 124px;
+        text-align: center;
+    }
+    .di .shang .cen .fl {
+        margin-right: 68px;
+    }
+    .di .shang .right {
+        border-left: 1px solid #48526c;
+        height: 194px;
+        padding-left: 56px;
+    }
+    .di .shang .right div {
+        display: inline-block;
+        width: 55px;
+        height: 56px;
+        background: url(../images/icon.png) 0 -383px;
+        margin-bottom: 35px;
+    }
+    .di .shang .right div:nth-child(2) {
+        background: url(../images/icon.png) -78px -381px;
+    }
+    .di .shang .right div:nth-child(2) {
+        background: url(../images/icon.png) -78px -477px;
+    }
+    .di .shang .right p {
+        height: 22px;
+        font-size: 14px;
+        color: #6f7788;
+    }
+    .di .xia {
+        width: 780px;
+        margin: 40px auto;
+    }
+    .di .xia p {
+        height: 25px;
+        text-align: center;
+        color: #6f7788;
+    }

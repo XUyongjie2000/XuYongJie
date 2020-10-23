@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = {
+            id: 1,
+            name: "andy",
+            msg: {
+                age: 18,
+            },
+            color: ["pink", "red"],
+        };
+
+        var o = {}
+        //定义深拷贝函数
+        function deepCopy(newObj, oldObj) {
+            for (var k in oldObj) {
+                //值
+                var item = oldObj[k]
+                //判断是不是数组
+                if (Array.isArray(item)) {
+                    //把值给新数组
+                    newObj[k] = []
+                    deepCopy(newObj[k], item)
+                } else if (item instanceof Object) {
+                    //看看是不是对象
+                    newObj[k] = {}
+                    deepCopy(newObj, item)
+                } else {
+                    newObj[k] = item
+                }
+            }
+        }
+        deepCopy(o, obj)
+        o.msg.age = 25
+        console.log(o, obj);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //[] 代表可选的
+
+        //简单的  有一个字母就可以
+        // var regexp = /[abc]/
+
+        // console.log(regexp.test('a')); true
+        // console.log(regexp.test('ab')); true
+        // console.log(regexp.test('abc')); true
+        // console.log(regexp.test('red')); false
+        // console.log(regexp.test('blue')); true
+
+        // ^以xxx开头 $以xxx结尾  只能有一个字母 多一个也不行
+        // var regexp = /^[abc]$/
+        // console.log(regexp.test('a')); true
+        // console.log(regexp.test('b')); true
+        // console.log(regexp.test('c')); true
+        // console.log(regexp.test('ab')); false
+        // console.log(regexp.test('blue')); false
+
+        // 匹配任意一个小写字母 - 代表范围 
+        // var regexp = /^[a-z]$/ // 小写a-z之间的都可以
+        // console.log(regexp.test('a')); true
+        // console.log(regexp.test('b')); true
+        // console.log(regexp.test('g')); true
+        // console.log(regexp.test('z')); true
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+body {
+  background-color: #2b2b2b;
+}
+/* 顶部导航 */
+.topnav {
+  width: 100%;
+  height: 28px;
+  background-color: #2b2b2b;
+  border: 1px solid #222222;
+}
+.topnav-left {
+  height: 28px;
+  float: left;
+}
+.topnav-left a {
+  float: left;
+  color: #ccc;
+  line-height: 28px;
+  margin: 0 10px;
+}
+.topnav-left a:hover {
+  color: #ff9d00;
+}
+.topnav-right {
+  float: right;
+}
+.topnav-right li {
+  float: left;
+}
+.topnav-right .myyxk {
+  width: 85px;
+  position: relative;
+}
+.topnav-right .myyxk span {
+  color: #ccc;
+}
+.topnav-right .myyxk:after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 70px;
+  width: 8px;
+  height: 4px;
+  background-image: url(../img/xiasanjiao.png);
+}
+.topnav-right .myyxk:hover {
+  background: #fff;
+}
+.topnav-right .myyxk:hover span {
+  color: #555;
+  z-index: 2;
+}
+.topnav-right .myyxk:hover ul {
+  display: block;
+}
+.topnav-right .myyxk ul a:hover {
+  background-color: #fdd000;
+  color: #fff;
+}
+.topnav-right > li > ul {
+  display: none;
+  top: 28px;
+  left: 0;
+  position: absolute;
+  background-color: #fff;
+  width: 85px;
+  z-index: 2;
+}
+.topnav-right > li li {
+  width: 100%;
+  height: 28px;
+}
+.topnav-right > li li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #555;
+  font-size: 12px;
+  text-align: center;
+  line-height: 28px;
+  margin: 0;
+}
+.topnav-right a,
+.topnav-right span {
+  line-height: 28px;
+  color: #ccc;
+  margin: 0 10px;
+  position: relative;
+}
+.topnav-right a:hover {
+  color: #ff9d00;
+}
+.topnav-right i {
+  font-size: 22px;
+}
+.topnav .app {
+  display: block;
+}
+
+.topnav .app span {
+  margin: 0;
+  line-height: 28px;
+  float: right;
+}
+.topnav .app i {
+  color: #fdd000;
+}
+.topnav .app:hover span {
+  color: #ff9d00;
+}
+.topnav-right li:nth-last-child(-n + 3) a:hover i {
+  color: #fdd000;
+}
+.topnav-right img {
+  position: absolute;
+  top: 11px;
+  right: -66px;
+  display: none;
+  z-index: 2;
+}
+.topnav-right a:hover img {
+  display: block;
+}
+
+/* 第二部分搜索栏 */
+.search {
+  height: 120px;
+  background-color: #333333;
+}
+.search-logo {
+  margin-left: 15px;
+  float: left;
+  margin-top: 35px;
+}
+.search-area {
+  width: 648px;
+  height: 40px;
+  float: left;
+  margin-left: 125px;
+  margin-top: 40px;
+}
+.search-area-city {
+  float: left;
+}
+.search-area-city span.myzhan {
+  font-size: 16px;
+  color: #fdd000;
+  line-height: 40px;
+  background-image: url(../img/search-area-xsj.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 14px;
+}
+.search-area-city ul {
+  display: none;
+}
+.search-area-city ul li {
+  height: 32px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 32px;
+}
+.search-area .search-area-city:hover ul {
+  display: block;
+}
+.search-area-city ul li:hover {
+  background-color: #fdd000;
+}
+.search-area-city ul li:hover a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+}
+
+.search-area-box {
+  float: left;
+  width: 564px;
+  height: 40px;
+  /*   box-sizing: border-box;包括边框包括padding的盒子大小*/
+  /* 总的大小不变 加上后  盒子会自动缩小 */
+  box-sizing: border-box;
+  border: 2px solid #fdd000;
+  margin-left: 18px;
+}
+.search-area-box-input {
+  float: left;
+  width: 430px;
+  height: 36px;
+}
+.search-area-box-input span {
+  float: left;
+  color: #afaaaa;
+  width: 52px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background-image: url(../img/xiasanjiao.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.search-area-box-input input {
+  float: right;
+  width: calc(430px - 52px);
+  height: 36px;
+  border: none;
+  background-color: transparent;
+  color: #deffff;
+  line-height: 36px;
+}
+.search-area-box button {
+  float: right;
+  background-color: #fdd000;
+  height: 36px;
+  width: 130px;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+.search-hotline {
+  float: left;
+}
+.search-service {
+  position: absolute;
+  bottom: -42px;
+  right: -102px;
+}
+.search-hotline p.time {
+  font-size: 12px;
+  color: #d2d2d2;
+  margin-bottom: 10px;
+}
+
+.search-hotline p.phone {
+  font-size: 17px;
+  font-weight: 700;
+  color: #fc0;
+}
+
+.search-hotline {
+  margin-left: 20px;
+  margin-top: 40px;
+}

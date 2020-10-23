@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 1145px;
+            margin: 0 auto;
+        }
+
+        .brand-top {
+            height: 30px;
+        }
+
+        .brand-top-left {
+            float: left;
+        }
+
+        .brand-top-right {
+            float: right;
+        }
+
+        .brand-bottom-left {
+            overflow: hidden;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .brand-bottom-right {
+            overflow: hidden;
+            float: left;
+        }
+
+        .brand-bottom-left img {
+            width: 100%;
+            height: 100%;
+            transition: all 1s;
+
+        }
+
+        .brand-bottom-right img {
+            width: 100%;
+            height: 100%;
+            transition: all 1s;
+        }
+
+        .brand-bottom-left img:hover {
+            transform: scale(1.1);
+        }
+
+        .brand-bottom-right img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="brand">
+        <div class="container">
+            <div class="brand-top">
+                <div class="brand-top-left">品牌专区</div>
+                <div class="brand-top-right">更多+</div>
+            </div>
+            <div class="brand-bottmo">
+                <div class="brand-bottom-left">
+                    <img src="./images/1.jpeg" alt="">
+                </div>
+                <div class="brand-bottom-right">
+                    <img src="./images/2.jpeg" alt="">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

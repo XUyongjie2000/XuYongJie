@@ -1,0 +1,50 @@
+/*初始化*/
+body,ul,h1,h2,h3,h4,h5,h6,p,input,button,dl,dt,dd,form {
+    margin: 0;
+    padding: 0;
+}
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+body {
+    background-color:#f6f6f6;
+    font: 12px arial,"microsoft yahei";
+    color: #999999;
+}
+img {
+    border: 0 none;
+    vertical-align: middle;
+}
+input, button {
+    border: 0 none;
+    outline-style: none;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 400;
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+i, em {
+    font-style: normal;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;               
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<div class="top">
+		<img src="img/top1.png" alt="" />
+	</div>
+	<div class="louceng">
+		<!-- 楼层1 -->
+		<div class="jd jia">
+			<img src="img/jia.png" alt="" />
+		</div>
+		<!-- 楼层2 -->
+		<div class="jd dian">
+			<img src="img/dian.png" alt="" />
+		</div>
+		<!-- 楼层3 -->
+		<div class="jd fu">
+			<img src="img/fu.png" alt="" />
+		</div>
+		<!-- 楼层4 -->
+		<div class="jd mei">
+			<img src="img/mei.png" alt="" />
+		</div>
+	</div>
+	<div class="bottom">
+		<img src="img/bottom.png" alt="" />
+	</div>
+	<!-- 侧边栏 -->
+	<div class="subnav">
+		<ul>
+			<li>家电通讯</li>
+			<li>电脑数码</li>
+			<li>服饰精品</li>
+			<li>美容珠宝</li>
+		</ul>
+		<div class="back">返回</div>
+
+	</div>
+	<script src="../lib/jquery-3.4.1.min.js"></script>
+
+	<script>
+		$(function () {
+			// 显示隐藏楼层
+			var topone = $('.jia').offset().top
+
+			$(window).scroll(function () {
+				if ($(document).scrollTop() >= topone) {
+					$('.subnav').fadeIn();
+				} else {
+					$('.subnav').fadeOut();
+				}
+			})
+			// 点击导航滚动到相应区域
+			$('ul li').click(function () {
+				// console.log($(this).index());
+				// 当每次点击li 计算页面要去往的位置
+				// 选出对应索引号得内容去的盒子  
+				var current = $('.louceng .jd').eq($(this).index()).offset().top;
+				// 页面滚动效果
+				$('body,html').stop().animate({
+					scrollTop: current
+				})
+				$(this).addClass('current').siblings().removeClass();
+			})
+			// 返回顶部
+			$('.back').click(function () {
+				$('body,html').stop().animate({
+					scrollTop: 0
+				})
+			})
+			// 点击之后让当前li添加类名 兄弟移除类名
+
+		})
+	</script>
+</body>
+
+</html>

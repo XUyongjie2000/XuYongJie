@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <toubu>
+            <template v-slot:left>
+                左
+            </template>
+        </toubu>
+    </div>
+
+
+    <script src="./lib/vue-3.0.js"></script>
+    <script>
+        let vm = Vue.createApp({})
+
+        vm.component("toubu", {
+            template: `
+            <header>
+            <slot name="left">一而三十五</slot>
+            <slot name="center">中</slot>
+            <slot name="right">右</slot>
+            </header>
+            `
+        })
+        vm.mount("#app")
+    </script>
+
+</body>
+
+</html>

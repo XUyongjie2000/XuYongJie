@@ -1,0 +1,404 @@
+@charset "UTF-8";
+.top {
+  width: 100%;
+  height: 40px;
+  background-color: #c91523;
+  position: fixed;
+  top: 0;
+  padding-left: 80px;
+  padding-right: 54px;
+  left: 0;
+}
+
+.top i {
+  display: block;
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  background-position: 0px -310px;
+  background-size: 200px;
+  left: 0;
+  top: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.top span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-position: -120px -200px;
+  background-size: 200px;
+  position: absolute;
+  top: 12px;
+  left: 90px;
+}
+
+.top input {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 15px;
+  margin-top: 5px;
+  padding-left: 30px;
+}
+
+.top a {
+  display: block;
+  width: 54px;
+  height: 100%;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 14px;
+}
+
+.foot {
+  width: 100%;
+  height: 44px;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.foot a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.foot img {
+  height: 44px;
+}
+
+/* 主体 */
+main {
+  height: 10000px;
+  padding-top: 40px;
+  padding-bottom: 44px;
+}
+
+/* 主体-轮播图 */
+.carousel {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.carousel ul {
+  width: 1000%;
+  overflow: hidden;
+}
+
+.carousel li {
+  float: left;
+  width: 10%;
+}
+
+.carousel a {
+  width: 100%;
+  display: block;
+}
+
+.carousel img {
+  width: 100%;
+}
+
+/* 3.2 主体-导航 */
+.navigate {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 10px;
+}
+
+.navigate ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+.navigate li {
+  float: left;
+  width: 25%;
+  margin-bottom: 10px;
+}
+
+.navigate a {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.navigate img {
+  width: 40px;
+  height: 40px;
+}
+
+.navigate span {
+  display: block;
+  margin-top: 5px;
+}
+
+.seckill {
+  width: 100%;
+  margin-top: 5px;
+  background-color: #fff;
+}
+
+.seckill-title {
+  padding: 0 10px;
+  width: 100%;
+  height: 30px;
+}
+
+.seckill-title h3 {
+  position: relative;
+  float: left;
+  line-height: 32px;
+  padding-left: 24px;
+  font-size: 16px;
+  color: #c91523;
+}
+
+.seckill-title h3::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 18px;
+  height: 24px;
+  background-image: url(../images/jd-sprites.png);
+  background-size: 200px;
+  background-position: -84px -109px;
+}
+
+.seckill-title .time {
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.seckill-title .time span:nth-child(odd) {
+  background-color: black;
+  color: #fff;
+  padding: 0 2px;
+  padding-top: 1px;
+  border-radius: 3px;
+}
+
+.seckill-title .more {
+  padding-right: 25px;
+  position: relative;
+  float: right;
+  color: #666666;
+  line-height: 30px;
+}
+
+.seckill-title .more::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 18px;
+  height: 15px;
+  background-image: url(../images/jd-sprites.png);
+  background-size: 200px;
+  background-position: -180px -50px;
+}
+
+.seckill-list {
+  width: 100%;
+  padding: 0 10px;
+  padding-bottom: 15px;
+}
+
+.seckill-list ul {
+  width: 100%;
+  overflow: hidden;
+}
+
+.seckill-list li {
+  float: left;
+  width: 33%;
+}
+
+.seckill-list a {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.seckill-list span {
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  height: 20px;
+  padding: 0 5px;
+  background-color: #fdb60a;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.seckill-list img {
+  width: 100%;
+}
+
+.seckill-list b {
+  font-size: 16px;
+  color: #c91624;
+}
+
+.seckill-list s {
+  color: #666;
+  text-decoration: line-through;
+}
+
+.seckill-list b,
+s {
+  display: block;
+  text-align: center;
+}
+
+.active {
+  position: relative;
+  width: 100%;
+}
+
+.active img {
+  width: 100%;
+}
+
+.active ul {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.active li {
+  float: left;
+  width: 50%;
+}
+
+.active a {
+  display: block;
+  width: 100%;
+}
+
+.product {
+  width: 100%;
+}
+
+.product ul {
+  width: 100%;
+}
+
+.product li {
+  width: 100%;
+  overflow: hidden;
+}
+
+.product li:first-child a {
+  width: 33%;
+}
+
+.product li:last-child a {
+  width: 50%;
+}
+
+.product a {
+  float: left;
+}
+
+.product img {
+  width: 100%;
+}
+
+.adv {
+  width: 100%;
+  padding: 10px;
+}
+
+.adv img {
+  width: 100%;
+}
+
+.adv a {
+  display: block;
+  width: 100%;
+}
+
+.market {
+  width: 100%;
+  margin-top: 5px;
+  padding: 0 10px;
+  background-color: #fff;
+}
+
+.market ul {
+  width: 100%;
+}
+
+.market li {
+  width: 100%;
+  overflow: hidden;
+}
+
+.market a {
+  float: left;
+  width: 50%;
+}
+
+.market img {
+  width: 100%;
+}
+
+.market-title,
+.brand-title {
+  height: 30px;
+  font-size: 16px;
+  color: #f25353;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.theme {
+  width: 100%;
+}
+
+.theme ul {
+  width: 100%;
+}
+
+.theme li {
+  width: 100%;
+  overflow: hidden;
+}
+
+.theme li:first-child a {
+  width: 50%;
+}
+
+.theme li::last-child a {
+  width: 25%;
+}
+
+.theme a {
+  float: left;
+}
+
+.theme img {
+  width: 100%;
+}
+/*# sourceMappingURL=index.css.map */

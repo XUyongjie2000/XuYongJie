@@ -1,0 +1,31 @@
+@import "./sidebar.scss";
+
+header {
+  background-color: red;
+}
+.flash-litle-button {
+  float: right;
+  margin-top: calc((62px - 24px) / 2);
+  width: 71px;
+  height: 24px;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+}
+a {
+  float: left;
+  width: 34px;
+  height: 22px;
+  text-align: center;
+}
+i {
+  line-height: 22px;
+  font-size: 16px;
+  color: red;
+}
+
+article a {
+  color: blue;
+  &:hover {
+    color: red;
+  }
+}

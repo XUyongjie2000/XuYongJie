@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 第二步开始写样式 先清除默认样式 */
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .banner {
+            /* 第三步 给大盒子一个800px的宽度和400px的高度
+                       然后给一个背景颜色 然后居中
+            */
+            width: 900px;
+            height: 400px;
+            background: palegreen;
+            margin: 0 auto;
+        }
+        .arrow {
+            /* 第四步给小盒子20px的宽度50px的高度
+                    然后给一个背景颜色
+            */
+            width: 20px;
+            height: 50px;
+            background: skyblue;
+            /* 第七步在小盒子里面设置定位 */
+            position: absolute;
+            left: 330px;
+            top: 200px;
+        }
+        img {
+            /* 第六步 让整张图片铺满这个大盒子 所有给img设置一样的宽高 */
+            width: 900px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 需求：在一个广告上面放一个小图标 -->
+    <!-- 第一步先设置一个大盒子然后在大盒子里面设置一个小盒子 -->
+    <div class="banner">
+        <!--第五步给大盒子插入一张图片 -->
+        <img src="images/jd.jpg" alt="">
+        <div class="arrow"></div>
+    </div>
+</body>
+</html>

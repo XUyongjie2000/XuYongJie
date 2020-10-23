@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            background: linear-gradient(to top,
+                    #cccccc 0%,
+                    #fdfed0 100%);
+        }
+
+        @keyframes move {
+            0% {
+                transform: rotateX(10deg) rotateY(20deg) rotateZ(10deg);
+            }
+
+            50% {
+                transform: rotateX(190deg) rotateY(200deg) rotateZ(190deg);
+
+            }
+
+            100% {
+                transform: rotateX(370deg) rotateY(380deg) rotateZ(370deg);
+
+            }
+        }
+
+
+
+        .cube {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            /* border: 1px solid #cccccc; */
+            margin: 200px auto;
+            transform-style: preserve-3d;
+
+            transform: rotateX(10deg) rotateY(20deg) rotateZ(10deg);
+        }
+
+        body:hover .cube {
+            animation: move 3s infinite linear;
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            line-height: 300px;
+            font-size: 100px;
+            text-align: center;
+            color: #e991ef;
+            opacity: 0.4;
+            border: 10px solid red;
+            border-radius: 10%;
+            ;
+        }
+
+        span:nth-child(1) {
+            background-color: red;
+            transform: translateZ(150px);
+            animation: waimian2 1s linear infinite;
+        }
+
+        span:nth-child(2) {
+            background-color: orange;
+            transform: translateZ(-150px);
+            animation: waimian3 1s linear infinite;
+        }
+
+        span:nth-child(3) {
+            background-color: yellow;
+            transform: rotateX(90deg) translateZ(150px);
+            animation: waimian1 1s linear infinite;
+        }
+
+        span:nth-child(4) {
+            background-color: green;
+            transform: rotateX(90deg) translateZ(-150px);
+            animation: waimian4 1s linear infinite;
+
+        }
+
+        span:nth-child(5) {
+            background-color: blue;
+            transform: rotateY(90deg) translateZ(150px);
+            animation: waimian5 1s linear infinite;
+        }
+
+        span:nth-child(6) {
+            background-color: purple;
+            transform: rotateY(90deg) translateZ(-150px);
+            animation: waimian6 1s linear infinite;
+
+        }
+
+
+        @keyframes waimian1 {
+            0% {
+                transform: rotateX(90deg) translateZ(150px);
+            }
+
+            100% {
+                transform: rotateX(90deg) translateZ(250px);
+            }
+        }
+
+        @keyframes waimian2 {
+            0% {
+                transform: translateZ(150px);
+            }
+
+            100% {
+                transform: translateZ(250px);
+            }
+        }
+
+        @keyframes waimian3 {
+            0% {
+                transform: translateZ(-150px);
+            }
+
+            100% {
+                transform: translateZ(-250px);
+            }
+        }
+
+        @keyframes waimian4 {
+            0% {
+                transform: rotateX(90deg) translateZ(-150px);
+            }
+
+            100% {
+                transform: rotateX(90deg) translateZ(-250px);
+            }
+        }
+
+        @keyframes waimian5 {
+            0% {
+                transform: rotateY(90deg) translateZ(150px);
+            }
+
+            100% {
+                transform: rotateY(90deg) translateZ(250px);
+            }
+        }
+
+        @keyframes waimian6 {
+            0% {
+                transform: rotateY(90deg) translateZ(-150px);
+            }
+
+            100% {
+                transform: rotateY(90deg) translateZ(-250px);
+            }
+        }
+
+        /*  */
+        .saizi-1 {
+            transform: translateZ(50px);
+        }
+
+        .saizi-2 {
+            transform: translateZ(-50px);
+        }
+
+        .saizi-3 {
+            transform: rotatey(90deg) translateZ(50px);
+        }
+
+        .saizi-4 {
+            transform: rotatey(90deg) translateZ(-50px);
+        }
+
+        .saizi-5 {
+            transform: rotatex(90deg) translateZ(50px);
+        }
+
+        .saizi-6 {
+            transform: rotatex(90deg) translateZ(-50px);
+        }
+
+        .limian {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 100px;
+            left: 100px;
+            transform-style: preserve-3d;
+        }
+
+        .limian div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            font-size: 40px;
+            line-height: 100px;
+            text-align: center;
+            color: #f993f9;
+            background-color: #ffffff;
+            border: 5px solid #000;
+            border-radius: 10%;
+        }
+
+        .saizi1 {
+            float: left;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 40px 40px;
+            background-color: #f993f9;
+        }
+
+        .saizi2 {
+            float: left;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 17px 34px;
+            background-color: #f993f9;
+        }
+
+        .saizi3 {
+            float: left;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 6px 40px;
+            background-color: #f993f9;
+        }
+
+        .saizi4 {
+            float: left;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 10px 20px;
+            background-color: #f993f9;
+        }
+
+        .saizi4:nth-child(3) {
+            margin: -70px 60px;
+        }
+
+        .saizi4:nth-child(4) {
+            margin: -30px 60px;
+        }
+
+        .saizi5 {
+            float: left;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 16px 70px;
+            background-color: #f993f9;
+        }
+
+        .saizi5:nth-child(3) {
+            margin: -36px 10px;
+        }
+
+        .saizi5:nth-child(4) {
+            margin: -60px 40px;
+        }
+
+        .saizi5:nth-child(5) {
+            margin: -90px 10px;
+        }
+
+        .saizi6 {
+            float: left;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 6px 60px;
+            background-color: #f993f9;
+        }
+
+        .saizi6:nth-child(4) {
+            margin: -90px 16px;
+        }
+
+        .saizi6:nth-child(5) {
+            margin: -60px 16px;
+        }
+
+        .saizi6:nth-child(6) {
+            margin: -26px 16px;
+        }
+
+        @keyframes xz {
+            0% {
+                transform: rotateX(100deg) rotateY(110deg) rotateZ(100deg);
+            }
+
+            25% {
+                transform: rotateX(190deg) rotateY(20deg) rotateZ(190deg);
+            }
+
+            50% {
+                transform: rotateX(280deg) rotateY(-50deg) rotateZ(280deg);
+            }
+
+            75% {
+                transform: rotateX(190deg) rotateY(20deg) rotateZ(190deg);
+            }
+
+            100% {
+                transform: rotateX(100deg) rotateY(110deg) rotateZ(100deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cube">
+        <span>上面</span>
+        <span>下面</span>
+        <span>左面</span>
+        <span>右面</span>
+        <span>前面</span>
+        <span>后面</span>
+
+
+        <div class="limian">
+            <div class="saizi-1"><span class="saizi1"></span></div>
+            <div class="saizi-2"><span class="saizi2"></span><span class="saizi2"></span></div>
+            <div class="saizi-3"><span class="saizi3"></span><span class="saizi3"></span><span class="saizi3"></span>
+            </div>
+            <div class="saizi-4"><span class="saizi4"></span><span class="saizi4"></span><span
+                    class="saizi4"></span><span class="saizi4"></span></div>
+            <div class="saizi-5"><span class="saizi5"></span><span class="saizi5"></span><span
+                    class="saizi5"></span><span class="saizi5"></span><span class="saizi5"></span></div>
+            <div class="saizi-6"><span class="saizi6"></span>
+                <span class="saizi6"></span>
+                <span class="saizi6"></span>
+                <span class="saizi6"></span>
+                <span class="saizi6"></span>
+                <span class="saizi6"></span></div>
+        </div>
+    </div>
+</body>
+
+</html>

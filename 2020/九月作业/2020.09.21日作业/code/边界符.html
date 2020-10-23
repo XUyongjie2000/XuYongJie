@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //简单的 (包含就可以)
+        // var regexp = /abc/
+        // console.log(regexp.test("a")); false
+        // console.log(regexp.test("abc")); true
+        // console.log(regexp.test("abcabcabc")); true
+        // console.log(regexp.test("abcdef")); true
+
+        //^ 代表以那些符号开头 (开头必须是)
+        // var regexp = /^abc/
+        // console.log(regexp.test("a")); false
+        // console.log(regexp.test("abc")); true
+        // console.log(regexp.test("abcabcabc")); true
+        // console.log(regexp.test("aabcabcabc")); false
+        // console.log(regexp.test("abcabcd")); true
+
+        //$ 以那些字符结尾 (结尾必须是)
+        // var regexp = /abc$/
+        // console.log(regexp.test("a")); false
+        // console.log(regexp.test("abcd")); false
+        // console.log(regexp.test("abcabcabc")); true
+        // console.log(regexp.test("aabcabcabc")); true
+        // console.log(regexp.test("abcdabc")); true
+
+
+        // ^ 开头 $结尾 准确匹配  只能是abc
+        // var regexp = /^abc$/
+        // console.log(regexp.test("abc")); true
+        // console.log(regexp.test("abcabcabc")); false
+        // console.log(regexp.test("abcd")); false
+        // console.log(regexp.test("abcabc")); false
+    </script>
+</body>
+
+</html>

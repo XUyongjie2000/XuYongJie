@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span {
+      color: green;
+    }
+  </style>
+</head>
+<div class="box">
+  <input type="text"><span></span>
+</div>
+
+<body>
+  <script>
+    var inp = document.querySelector('input');
+    var span = document.querySelector('span');
+    // var inpvalue = inp.value;
+
+    console.log(span);
+
+    var regexp = /^[a-zA-Z0-9-_]{6,16}$/;
+
+    inp.onkeydown = function (e) {
+      if (e.keyCode == 13) {
+        if (regexp.test(inp.value)) {
+          console.log(111);
+          span.innerText = '用户格式输入正确';
+          span.style.setProperty('color','green');
+        } else {
+          console.log(222);
+          span.innerText = '用户格式输入不正确';
+          span.style.setProperty('color','red');
+        }
+      }
+    }
+
+  </script>
+</body>
+
+</html>

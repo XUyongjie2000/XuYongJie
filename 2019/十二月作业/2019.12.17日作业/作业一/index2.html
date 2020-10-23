@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            width: 38px;
+            height: 200px;
+            background-color: #ffffff;
+        }
+
+        .box a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-image: url(./img/spirte.png);
+            background-repeat: no-repeat;
+        }
+
+        .box a b {
+            margin-left: 40px;
+            display: block;
+            width: 111px;
+            height: 40px;
+            /* background-image: url(./img/spirte.png); */
+            /* background-repeat: no-repeat; */
+            background-position: -41px 2px;
+            left: 0;
+            top: 0;
+            background-color: #75d599;
+            display: none
+        }
+
+        .box a:nth-child(2) b {
+            background-color: #f97f67;
+            display: none;
+        }
+
+        .box b span {
+            float: right;
+            line-height: 40px;
+            color: white;
+            margin-right: 22px;
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        .box a:nth-child(1) {
+            background-position: 0px 0px;
+        }
+
+        .box a:nth-child(2) {
+            background-position: 0px -482px;
+        }
+
+        .box a:nth-child(3) {
+            background-position: 0px -520px;
+        }
+
+        .box a:nth-child(4) {
+            background-position: 0px -245px;
+        }
+
+        .box a:nth-child(5) {
+            background-position: 0px -563px;
+        }
+
+        .box a:hover b {
+            display: block;
+        }
+
+        .box a:hover {
+            background-color: #75d599;
+        }
+
+        .box a:nth-child(2):hover {
+            background-color: #f97f67;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a href="#">
+            <b>
+                <span>图书</span>
+            </b>
+        </a>
+        <a href="#">
+            <b>
+                <span>服装</span>
+            </b>
+        </a>
+        <a href="#">
+            <b>
+                <span>日用百货</span>
+            </b>
+        </a>
+        <a href="#">
+            <b>
+                <span>孕婴童</span>
+            </b>
+        </a>
+        <a href="#">
+            <b>
+                <span>猜你喜欢</span>
+            </b>
+        </a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //步骤
+     
+      do{
+ //1.定义一个变量  用来接收 用户输入的用户名
+ var  username=prompt('请输入您的用户名')
+   //2.定义一个变量  用来接收 用户输入的密码
+   var password=prompt('请输入您的密码')
+    //3. 判断如果用户名不等于admin 或者密码不等于123456 那就接着循环
+      }while(username!='admin'|| password!='123456')
+       //4.如果判断  用户名和密码都正确 才打印 登录成功
+       if(username=='admin'&&password=='123456'){
+        alert('用户登录成功')
+       }
+     
+        </script>
+</body>
+</html>

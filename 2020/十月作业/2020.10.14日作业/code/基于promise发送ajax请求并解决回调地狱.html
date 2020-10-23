@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //原生js
+        let oBtn = document.querySelector("button")
+        oBtn.onclick = function () {
+            queryData("http://localhost:3000/data").then(function (data) {
+                console.log(data);
+                return queryData("http://localhost: 3000 / data1")
+            }).then(function (data) {
+                console.log(data);
+                return queryData("http://localhost:3000/data2")
+            }).then(function (data) {
+                console.log(data);
+            })
+        }
+
+        
+    </script>
+</body>
+
+</html>

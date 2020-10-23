@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid {
+            margin: auto;
+            width: 530px;
+            text-align: center;
+        }
+
+        .grid table {
+            border-top: 1px solid #C2D89A;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .grid th,
+        td {
+            padding: 10;
+            border: 1px dashed orange;
+            height: 35px;
+            line-height: 35px;
+        }
+
+        .grid th {
+            background-color: orange;
+        }
+
+        .grid .book {
+            padding-bottom: 10px;
+            padding-top: 5px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="grid">
+            <div>
+                <h1>图书管理</h1>
+                <div class="book">
+                    <div>
+                        <label for="id">
+                            编号：
+                        </label>
+                        <input type="text" id="id" v-model='id' :disabled="flag">
+                        <label for="name">
+                            名称：
+                        </label>
+                        <input type="text" id="name" v-model='name'>
+                        <button @click="handleAdd">提交</button>
+                    </div>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>名称</th>
+                        <th>时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item,index) in books" :key='item.id'>
+                        <td>{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.date}}</td>
+                        <td>
+                            <a href="" @click.prevent="handleEdit(item.id)">修改</a>
+                            <span>|</span>
+                            <a href="" @click.prevent="handleDel(item.id)">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="./lib/vue-3.0.js"></script>
+
+    <script>
+        let vm = Vue.createApp({
+            data() {
+                return {
+                    flag: false,
+                    id: '',
+                    name: "",
+                    books: ''
+                }
+            },
+            //当页面打开 要获取数据
+            created() {
+                //获取localStorage中的数据
+                this.books = JSON.parse(localStorage.getItem('books') || '[]')
+            },
+            methods: {
+                //添加图书
+                handleAdd() {
+                    //获取编号获取名称组成新对象放到books里
+                    if (this.flag) {
+                        let that = this
+                        let index = this.books.findIndex(function (item) {
+                            return item.id == that.id
+                        })
+                        this.books[index].name = this.name
+                        this.id = ""
+                        this.name = ""
+                        this.flag = false
+                        //放到localStorage里面更新
+                        localStorage.setItem("books", JSON.stringify(this.books))
+                    } else {
+                        this.books.push({
+                            id: new Date().valueOf(),
+                            name: this.name,
+                            date: new Date().toLocaleDateString()
+                        })
+                        //放到localStorage里面更新
+                        localStorage.setItem("books", JSON.stringify(this.books))
+                        //清空输入框
+                        this.id = ""
+                        this.name = ""
+                    }
+
+                },
+                //删除图书
+                handleDel(id) {
+                    // console.log(id);
+                    let index = this.books.findIndex(item => item.id == id)
+                    this.books.splice(index, 1)
+                    //放到localStorage里面更新
+                    localStorage.setItem("books", JSON.stringify(this.books))
+                },
+                //修改图书
+                handleEdit(id) {
+                    //id不能输入
+                    this.flag = true
+                    //获取id对应内容
+                    let arr = this.books.filter(item => item.id == id)
+                    this.id = arr[0].id
+                    this.name = arr[0].name
+                }
+            }
+        }).mount("#app")
+    </script>
+</body>
+
+</html>

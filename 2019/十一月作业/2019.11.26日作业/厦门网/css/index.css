@@ -1,0 +1,36 @@
+.topnav {
+  width: 100%;
+  height: 36px;
+  background-color: #fbfbfb;
+}
+.topnav-left {
+  float: left;
+  padding-left: 14px;
+  box-sizing: border-box;
+}
+.topnav-left a {
+  font-size: 12px;
+  color: #717171;
+  line-height: 36px;
+}
+.topnav-left ul {
+  float: left;
+}
+.topnav-left li {
+  float: left;
+}
+.topnav-left > a:nth-child(1) {
+  float: left;
+}
+.topnav-left i {
+  line-height: 36px;
+  color: #717171;
+  margin: 0 12px;
+}
+.topnav-right {
+  float: right;
+}
+
+.topnav-right li {
+  float: left;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: hotpink;
+    }
+
+    /* 1. 超小屏幕(手机) 宽度是不是小于768  版心的宽度100% */
+    @media screen and (max-width: 767px) {
+      .container {
+        width: 100%;
+      }
+    }
+
+
+    /* 2.小屏幕（平板） 宽度是不是大于768 版心的宽度 750px */
+    @media screen and (min-width: 768px) {
+      .container {
+        width: 750px;
+        background-color: lightpink;
+      }
+    }
+
+    /* 3.中屏幕（小显示器） 宽度是不是大于等于992 版心的宽度 970px */
+    @media screen and (min-width: 992px) {
+      .container {
+        width: 970px;
+        background-color: red;
+      }
+    }
+
+    /* 4.大屏幕（大显示器） 宽度是不是大于等于1200 版心的宽度 1170px */
+    @media screen and (min-width: 1200px) {
+      .container {
+        width: 1170px;
+        background-color: royalblue;
+      }
+    }
+
+
+  /* 5.超大屏幕（超大显示器） 宽度是不是大于等于1600 版心的宽度 1170px */
+      @media screen and (min-width: 1600px) {
+      .container {
+        width: 1600px;
+        background-color: saddlebrown;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 版心 -->
+  <div class="container"></div>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header>
+    <div class="send"></div>
+  </header>
+  <!-- 主体内容体 -->
+  <main>
+    <!-- 这个是许愿签的模板 -->
+    <div class="list">
+      <!-- <div class="list-top">
+        <span>拉拉</span>
+        <span>No.00001</span>
+      </div>
+      <div class="list-center">
+        大家今天要好好把后台布局完成大家今天要好好把后台布局完成大家今天要好好把后台布局完成
+      </div>
+      <div class="list-bottom">
+        <span>今天08:30</span>
+        <span></span>
+      </div> -->
+    </div>
+  </main>
+  <!-- 遮罩层 -->
+  <div class="mask">
+    <div class="box">
+      <div class="mask-title">
+        <span>许下你的愿望</span>
+        <span class="fr close"></span>
+      </div>
+      <div class="mask-content">
+        <div class="mask-nickname">
+          <h3>昵称:</h3>
+          <input type="text">
+        </div>
+        <div class="mask-wish">
+          <h3>愿望:(您还可以输入 <i>50</i> 个字)</h3>
+          <textarea name="" id="" cols="30" rows="10" maxlength="50"></textarea>
+        </div>
+        <div class="release">
+          <img src="./img/send-btn.png" alt="" class="fr">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./lib/jquery-3.4.1.min.js"></script>
+  <script>
+    let all = [{ 'name': '拉拉', 'say': '大家今天要好好把后台布局完成' },
+    { 'name': '哈哈', 'say': '今天天气不错，风和日丽' },
+    { 'name': '秀秀', 'say': '真搞不懂你们地球人，月亮有什么好看的，全是坑，还是对面那哥们好看，' },
+    { 'name': '萌萌', 'say': '今天你拿苹果支付了么' },
+    { 'name': '帅帅', 'say': '新的一年，所有的人健康快乐' },
+    { 'name': '姚姚', 'say': '希望疫情早日过去' },
+    { 'name': '老杨', 'say': '我在学校等你们来' },
+    { 'name': '丁丁', 'say': '今天的新校区好美丽，风景无限好' }]
+    // console.log(suiLeft)
+    for (let i = 0; i < all.length; i++) {
+      suiLeft = parseInt(Math.random() * 1800)
+      suiTop = parseInt(Math.random() * 600)
+      let div = document.createElement('div')
+      $('.list').append($(div).html(`<div class="list-top">
+        <span>${all[i].name}</span>
+        <span>No.00001</span>
+      </div>
+      <div class="list-center">
+        ${all[i].say}
+      </div>
+      <div class="list-bottom">
+        <span>${getTimes()}</span>
+        <span></span>
+      </div> `).css({
+        'position': 'absolute',
+        'top': suiTop,
+        'left': suiLeft
+      }))
+
+    }
+    // 功能3：每个许愿签上面的时间(时和分)是和系统当前的时间一样的
+    function getTimes() {
+      let date = new Date()
+      let h = date.getHours()
+      let m = date.getMinutes()
+      h = h < 10 ? '0' + h : h
+      m = m < 10 ? '0' + m : m
+      return `今天${h}:${m}`
+    }
+    // 功能5: 当鼠标点击每个许愿签上面的"X"的时候，当前这个许愿签就会从页面中消失
+    // console.log($('.list-bottom span:last-child'))
+    $('main').on('click', '.list-bottom span:last-child', function () {
+      $(this).parent().parent().remove()
+    })
+    // $('.list-bottom span:last-child').on('click', function () {
+    //   $(this).parent().parent().remove()
+    // })
+    //功能6：当许愿签堆叠在一起的时候，点击某个许愿签，当前这个许愿签就会在最上面，覆盖住别的许愿签
+    let num = 1
+    $('.list').children().on('click', function () {
+      num++
+      $(this).css({
+        'zIndex': num
+
+      })
+    })
+    // 功能7：点击”我要许愿“，就会显示遮罩层
+    $('.send').on('click', function () {
+      $('.mask').show()
+    })
+    // 功能8：点击”遮罩层“右上角的"X",这个遮罩层就会隐藏
+    $('.close').on('click', function () {
+      $('.mask').hide()
+    })
+
+    // 功能9：在遮罩层的第二个输入框，不断的输入内容，上面的"50"这个文字在随着内容的输入在不断的减少，最大长度是50
+    // console.log($('.mask-wish textarea').val().length)
+    $('.mask-wish textarea').on('input', function () {
+      let zi = 50 - $('.mask-wish textarea').val().length
+      $('.mask-wish h3').html(`愿望:(您还可以输入 <i>${zi}</i> 个字)`)
+    })
+    // 功能10：在遮罩层的2个输入框中输入内容，如果有一个输入框内容为空，或者是输入的都是空格键的话，点击”发布“之后，遮罩层关闭，但是页面中不会添加新的许愿签，如果2个用户都输入了内容，并且不是空格键的话，就会添加一条新的许愿签到页面中，遮罩层关闭，2个输入框的内容都清空
+    // console.log($('.release img'))
+    $('.release img').on('click', function () {
+      // console.log($('.mask-nickname input').val())
+      if ($('.mask-nickname input').val().trim().length == 0 || $('.mask-wish textarea').val().trim().length == 0) {
+        $('.mask').hide()
+      } else {
+        suiLeft = parseInt(Math.random() * 1800)
+        suiTop = parseInt(Math.random() * 600)
+        let div = document.createElement('div')
+        $('.list').append($(div).html(`<div class="list-top">
+        <span>${$('.mask-nickname input').val().trim()}</span>
+        <span>No.00001</span>
+      </div>
+      <div class="list-center">
+        ${$('.mask-wish textarea').val().trim()}
+      </div>
+      <div class="list-bottom">
+        <span>${getTimes()}</span>
+        <span></span>
+      </div> `).css({
+          'position': 'absolute',
+          'top': suiTop,
+          'left': suiLeft
+        }))
+        $('.mask-wish textarea').val('')
+        $('.mask-wish textarea').val('')
+        $('.mask').hide()
+
+      }
+    })
+
+  </script>
+</body>
+
+</html>

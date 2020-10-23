@@ -1,0 +1,295 @@
+/* 胥永杰 */
+* {
+  box-sizing: border-box;
+}
+
+.exam-title {
+  float: left;
+  margin-left: 290px;
+  height: 40px;
+}
+.exam-title li {
+  margin: 0 15px;
+  font-size: 15px;
+  float: left;
+}
+.exam-title i {
+  font-size: 15px;
+  float: left;
+}
+.exam-title li:nth-last-child(-n + 3) {
+  float: right;
+}
+.exam-title i:nth-last-child(-n + 3) {
+  float: right;
+}
+
+.menu-left {
+  float: left;
+  height: 435px;
+  width: 400px;
+  padding: 15px;
+}
+.menu .container {
+  height: 500px;
+  border-top: 1px solid #ededed;
+}
+.info {
+  height: 68px;
+  width: 378px;
+}
+.menu-left-listen {
+  color: #ffffff;
+  text-align: center;
+  line-height: 30px;
+  float: right;
+  width: 101px;
+  height: 30px;
+  background-color: #3eb134;
+}
+.menu-center {
+  width: 281px;
+  height: 392px;
+  float: left;
+}
+.menu-right {
+  width: 200px;
+  float: left;
+}
+.menu-right-right {
+  width: 285px;
+  float: left;
+}
+.menu-left-title .kecheng {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 700;
+}
+.left-jingji {
+  font-size: 17px;
+}
+.left-number {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 20px;
+  color: #e6393b;
+}
+.left-price {
+  font-size: 10px;
+  color: #737373;
+}
+.left-leibie {
+  margin-left: 25px;
+  font-size: 12px;
+  color: #9a9a9a;
+}
+.left-kaoyan {
+  font-size: 12px;
+  color: #3a3a3a;
+}
+.menu-left-class-price {
+  float: right;
+  color: #b9b9b9;
+}
+.menu-left-class li {
+  list-style-type: disc;
+  margin: 5px 0;
+}
+.menu-left-class ul {
+  border-top: 1px solid #f2f2f2;
+}
+.menu-left-class s {
+  margin-right: 5px;
+}
+.menu-center-title {
+  margin-top: 10px;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 700;
+}
+.menu-center-vip img {
+  margin-top: 5px;
+}
+.serves-vip {
+  font-size: 17px;
+}
+.liuyinan {
+  font-size: 20px;
+}
+.zhujiang {
+  font-size: 10px;
+}
+.menu-center-leibie {
+  margin-left: 20px;
+  font-size: 10px;
+  color: #9a9a9a;
+}
+.menu-center-kaoyan {
+  font-size: 10px;
+  color: #3a3a3a;
+}
+.bofang {
+  font-size: 10px;
+  color: #9a9a9a;
+}
+.bofang img {
+  margin-left: 20px;
+}
+.menu-center-new li {
+  list-style-type: disc;
+  margin: 10px 0;
+}
+.menu-center-new {
+  margin-top: 25px;
+  margin-left: 10px;
+  border-top: 1px solid #f2f2f2;
+}
+.people {
+  margin-top: 15px;
+}
+.people i {
+  float: right;
+}
+.dayi {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 700;
+}
+.menu-right-right-title a {
+  font-size: 14px;
+  color: #9f9f9f;
+  margin-right: 10px;
+  border-bottom: 2px solid#f6f6f6;
+}
+.menu-right-right-title a:hover {
+  color: #333333;
+}
+.recommend {
+  margin-top: 20px;
+}
+.dabiaoti {
+  font-size: 20px;
+  color: #222222;
+}
+.jieshao {
+  font-size: 10px;
+  color: #b2b2b2;
+  margin: 15px 0;
+  border-bottom: 2px solid #f2f2f2;
+}
+.question li {
+  list-style-type: disc;
+  margin-left: 20px;
+  font-size: 13px;
+  margin-top: 10px;
+}
+.people img {
+  display: block;
+}
+/* 偷偷打卡 */
+.blue {
+  font-size: 14px;
+  color: #72a7dc;
+  margin-top: -45px;
+}
+
+/* 顶部导航 */
+.topnav {
+  width: 100%;
+  height: 44px;
+  background-color: #0054a7;
+}
+.topnav-right {
+  line-height: 44px;
+  float: right;
+}
+.topnav-left {
+  line-height: 44px;
+  float: left;
+}
+.topnav-left .denglu {
+  padding: 15px 25px;
+  background-color: #00366d;
+}
+.topnav-left a {
+  color: #ffffff;
+  margin: 0 10px;
+}
+.topnav-right a {
+  padding: 15px 25px;
+  color: #ffffff;
+  border-left: 1px solid #004080;
+}
+.topnav-right .tupian {
+  padding: 15px 15px;
+}
+.logo {
+  float: left;
+}
+.search-center {
+  float: left;
+  position: relative;
+}
+.search-right {
+  float: left;
+}
+.search-center p {
+  width: 28px;
+  line-height: 20px;
+  display: inline-block;
+  font-size: 14px;
+}
+.search-center-sousuo {
+  border: none;
+  float: left;
+  width: 92px;
+  height: 38px;
+  background-color: #0054a7;
+  color: #e2ebf5;
+  font-size: 14px;
+}
+.search-center input {
+  padding-left: 75px;
+  float: left;
+  border: 3px solid #0054a7;
+  margin-left: 150px;
+  width: 395px;
+  height: 38px;
+}
+.search-center .more {
+  margin-left: 150px;
+}
+.search-center .more span {
+  margin: 0 6px;
+}
+.search-center a {
+  line-height: 30px;
+  width: 70px;
+  height: 30px;
+  background-color: #f6f6f6;
+  position: absolute;
+  left: 154px;
+  top: 4px;
+  text-align: center;
+}
+.search-class {
+  padding: 10px;
+  width: 200px;
+  height: 80px;
+  margin-left: 130px;
+}
+.search-class .chongzhi {
+  color: #ff8c14;
+}
+.search-class .ketang {
+  display: block;
+}
+.search-class .gouwucar {
+  float: right;
+}
+.search-class .gouwucar {
+  margin-top: -25px;
+}
+.search {
+  margin-top: 20px;
+}
