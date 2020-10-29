@@ -5,8 +5,9 @@
 
 <script>
 export default {
-  
+
   props: ["id"],
+  
   methods: {
     handleBack() {
       this.$router.go(-1);
