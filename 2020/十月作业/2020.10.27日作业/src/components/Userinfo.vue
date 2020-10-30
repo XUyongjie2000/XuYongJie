@@ -5,6 +5,7 @@
 
 <script>
 export default {
+  
   props: ["id"],
   methods: {
     handleBack() {
