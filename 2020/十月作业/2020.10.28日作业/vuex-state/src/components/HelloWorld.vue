@@ -26,6 +26,7 @@ export default {
   },
   computed: {
     // name() {
+      
     //   return this.$store.state.name;
     // },
     // age() {
