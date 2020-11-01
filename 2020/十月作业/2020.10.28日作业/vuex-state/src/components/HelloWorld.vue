@@ -19,6 +19,7 @@ export default {
   //组件是私有的  才在data中定义数据
   
   data() {
+    
     return {
       
     }
