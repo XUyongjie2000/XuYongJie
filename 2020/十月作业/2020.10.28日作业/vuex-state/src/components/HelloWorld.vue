@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
-    
+
     <h3>我叫{{ name }},我今年{{ age }}岁了</h3>
+    
   </div>
 </template>
 
