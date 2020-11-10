@@ -27,7 +27,7 @@ export default {
     
     let level = computed(() => store.state.level);
     
-    return {
+    r
       level
     };
   }
