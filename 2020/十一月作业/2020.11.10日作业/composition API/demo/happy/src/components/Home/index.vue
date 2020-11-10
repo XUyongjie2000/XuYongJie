@@ -26,6 +26,7 @@ export default {
     let store = useStore();
     
     let level = computed(() => store.state.level);
+    
     return {
       level
     };
