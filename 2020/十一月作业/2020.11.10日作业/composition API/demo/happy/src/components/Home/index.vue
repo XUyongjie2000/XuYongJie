@@ -24,6 +24,7 @@ export default {
   setup() {
     //获取store实例
     let store = useStore();
+    
     let level = computed(() => store.state.level);
     return {
       level
