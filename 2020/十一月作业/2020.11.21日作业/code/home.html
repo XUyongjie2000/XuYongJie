@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/echarts.min.js"></script>
+</head>
+
+<body>
+    <div class="main" id="main"></div>
+    <div class="main1" id="main1"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        option = {
+            title: {
+                text: '疫情数据实时报告',
+                subtext: '数据来自网络'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            legend: {
+                data: ['累计确诊', '累计治愈']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'value',
+                boundaryGap: [0, 0.01]
+            },
+            yAxis: {
+                type: 'category',
+                data: ['哈萨克斯坦', '巴林', '巴基斯坦', '也门共和国', '马尔代夫', '塔吉克斯坦', "黎巴嫩", '以色列', '卡塔尔', '蒙古', '土耳其', '伊拉克', '韩国', '异地尼西亚', '约旦', '越南', '阿联酋', '中国',]
+            },
+            series: [
+                {
+                    name: '累计确诊',
+                    type: 'bar',
+                    data: [164736, 85467, 371508, 2072, 12546, 11772, 113655, 327748, 137062, 557, 435273, 531769, 30403, 493308, 174335, 1305, 156523, 92648]
+                },
+                {
+                    name: '累计治愈',
+                    type: 'bar',
+                    data: [130043, 83416, 328931, 350, 11497, 10934, 64685, 316544, 134100, 337, 367592, 460394, 26365, 413955, 103834, 1142, 147309, 87321]
+                }
+            ]
+        };
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main1'));
+
+        // 指定图表的配置项和数据
+        option = {
+            title: {
+                text: '疫情数据实时报告',
+                subtext: '数据来自网络'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            legend: {
+                data: ['累计确诊', '累计治愈']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'value',
+                boundaryGap: [0, 0.01]
+            },
+            yAxis: {
+                type: 'category',
+                data: ['哈萨克斯坦', '巴林', '巴基斯坦', '也门共和国', '马尔代夫', '塔吉克斯坦', "黎巴嫩", '以色列', '卡塔尔', '蒙古', '土耳其', '伊拉克', '韩国', '异地尼西亚', '约旦', '越南', '阿联酋', '中国',]
+            },
+            series: [
+                {
+                    name: '累计确诊',
+                    type: 'bar',
+                    data: [164736, 85467, 371508, 2072, 12546, 11772, 113655, 327748, 137062, 557, 435273, 531769, 30403, 493308, 174335, 1305, 156523, 92648]
+                },
+                {
+                    name: '累计治愈',
+                    type: 'bar',
+                    data: [130043, 83416, 328931, 350, 11497, 10934, 64685, 316544, 134100, 337, 367592, 460394, 26365, 413955, 103834, 1142, 147309, 87321]
+                }
+            ]
+        };
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>
