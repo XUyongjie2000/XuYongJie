@@ -1,0 +1,10 @@
+.main1 {
+  float: right;
+  width: 800px;
+  height: 800px;
+}
+.main {
+  float: left;
+  width: 800px;
+  height: 800px;
+}
