@@ -1,0 +1,10 @@
+<!--components/compo/compo.wxml-->
+<view>
+  <text>compo组件</text>
+  <text>{{name}}</text>
+
+  <button bindtap="handleData">点我查看数据</button>
+  <button bindtap="handleaaa">在士大夫撒旦发生大</button>
+  <!-- properties -->
+  <view>{{propAge.family}}</view>
+</view>
