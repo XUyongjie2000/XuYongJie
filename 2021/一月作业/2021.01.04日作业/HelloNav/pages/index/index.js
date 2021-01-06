@@ -16,6 +16,7 @@ Page({
     }
   },
 
+  
   handleViewUser(){
     wx.navigateTo({
       url: "/pages/user/user?name=zs1&age=184",
