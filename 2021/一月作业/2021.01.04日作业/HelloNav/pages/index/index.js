@@ -23,6 +23,7 @@ Page({
     })
   },
 
+  
   handleViewLogs(){
     wx.switchTab({
       url: '/pages/logs/logs',
