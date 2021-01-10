@@ -30,6 +30,7 @@ Page({
     })
   },
 
+  
   handleReadMusic(){
     var _this = this;
     wx.request({
