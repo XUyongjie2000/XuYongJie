@@ -1,0 +1,44 @@
+<!--pages/about/about.wxml-->
+<!-- 总的盒子 view的使用 -->
+<view class="container">
+  <!-- A -->
+  <view class="a">A</view>
+  <!-- B -->
+  <view class="b">B</view>
+  <!-- C -->
+  <view class="c">C</view>
+</view>
+
+<!-- scroll-view的使用 -->
+<scroll-view scroll-y="true" style="height: 200rpx">
+  <view>1</view>
+  <view>2</view>
+  <view>3</view>
+  <view>4</view>
+  <view>5</view>
+  <view>6</view>
+  <view>7</view>
+  <view>8</view>
+  <view>9</view>
+</scroll-view>
+
+
+<!-- 轮播图 -->
+<!-- 轮播图的结构 -->
+<swiper class="swiper-container" autoplay="true">
+  <!-- 第一个轮播图 -->
+  <swiper-item>
+    <view class="item">A</view>
+  </swiper-item>
+  <!-- 第一个轮播图 -->
+  <swiper-item>
+    <view class="item">B</view>
+  </swiper-item>
+  <!-- 第一个轮播图 -->
+  <swiper-item>
+    <view class="item">C</view>
+  </swiper-item>
+</swiper>
+
+
+

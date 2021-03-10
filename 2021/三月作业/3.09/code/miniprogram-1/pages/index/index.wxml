@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container" data-a="5">
+  <!-- <view>{{name}}</view> -->
+  <!-- <image src="{{imgSrc}}"></image> -->
+  <!-- <view>{{num > 5? "大于5": "小于5"}}</view> -->
+
+  <!-- <button data-b="7" bindtap="handleTap">点击事件</button> -->
+
+  <button bindtap="handleClick" data-name="{{name}}">点击{{num}}</button>
+
+
+
+ <block wx:if="{{false}}">
+  <view>asdfasdf</view>
+  <view>asdfasdf</view>
+  <view>asdfasdf</view>
+ </block>
+
+ <view hidden="{{false}}">你好</view>
+
+ <!-- <view wx:for="{{list}}">{{item}}</view> -->
+
+ <!-- 只要key中的值 不重复 就可以 -->
+ <view wx:for="{{list}}" wx:for-index="i" wx:for-item="e" wx:key="i">{{i}}-{{e}}</view>
+
+ <button bindtap="onTapGet">GET请求</button>
+<button bindtap="onTapPost">POST请求</button>
+</view>

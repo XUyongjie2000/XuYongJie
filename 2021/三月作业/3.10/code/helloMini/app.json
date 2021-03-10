@@ -1,0 +1,23 @@
+{
+  "pages":[
+    "pages/about/about",
+    "pages/index/index",
+    "pages/logs/logs"
+   
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list":[
+      {
+        "pagePath": ""
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
